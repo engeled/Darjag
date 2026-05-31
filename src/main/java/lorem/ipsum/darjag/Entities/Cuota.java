@@ -5,22 +5,24 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
+
 @Entity
-@Table(name = "clientes")
+@Table(name = "cuotas")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Cliente {
+public class Cuota {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id_cliente;
+    private Long id_cuota;
 
-    // id zona
+    //idprestamo
 
-    private String nombre;
+    private Float monto;
 
-    private Integer celular;
+    private LocalDate fecha;
 
-    private Integer dni;
+    private Boolean estado;
 }
